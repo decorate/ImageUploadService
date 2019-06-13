@@ -1,5 +1,5 @@
 {
-    "name": "shrp/services",
+    "name": "shrp-services/image-upload",
     "license": "MIT",
     "description": "The image upload service",
     "authors": [
