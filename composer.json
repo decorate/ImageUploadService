@@ -28,7 +28,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sh\\Providers\\ImageServiceProvider"
+                "Sh\\Providers\\ImageUploadProvider"
             ],
             "aliases": {
                 "ImageUpload": "Sh\\Facades\\ImageUpload"
