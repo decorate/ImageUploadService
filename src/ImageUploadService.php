@@ -1,6 +1,6 @@
 <?php
 
-namespace Sh\Services;
+namespace Decorate\Services;
 
 
 use Faker\Generator as Faker;

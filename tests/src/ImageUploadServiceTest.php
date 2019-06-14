@@ -3,8 +3,8 @@
 
     use Illuminate\Http\UploadedFile;
     use Illuminate\Support\Facades\Storage;
-    use Sh\Services\ImageUploadService;
-    use Sh\Facades\ImageUpload;
+    use Decorate\Services\ImageUploadService;
+    use Decorate\Facades\ImageUpload;
 
     class ImageUploadServiceTest extends TestCase {
 

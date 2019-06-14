@@ -1,5 +1,5 @@
 <?php
-namespace Sh\Facades;
+namespace Decorate\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

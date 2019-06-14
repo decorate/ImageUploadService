@@ -1,8 +1,8 @@
 <?php
 
-namespace Sh\Providers;
+namespace Decorate\Providers;
 
-use Sh\Services\ImageUploadService;
+use Decorate\Services\ImageUploadService;
 use Illuminate\Support\ServiceProvider;
 
 class ImageUploadProvider extends ServiceProvider

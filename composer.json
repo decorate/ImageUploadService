@@ -1,5 +1,5 @@
 {
-    "name": "shrp-services/image-upload",
+    "name": "decorate/image-upload",
     "license": "MIT",
     "description": "The image upload service",
     "authors": [
@@ -19,19 +19,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Sh\\Services\\": "src",
-            "Sh\\Facades\\": "src/Facades",
-            "Sh\\Providers\\": "src/Providers",
+            "Decorate\\Services\\": "src",
+            "Decorate\\Facades\\": "src/Facades",
+            "Decorate\\Providers\\": "src/Providers",
             "Test\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Sh\\Providers\\ImageUploadProvider"
+                "Decorate\\Providers\\ImageUploadProvider"
             ],
             "aliases": {
-                "ImageUpload": "Sh\\Facades\\ImageUpload"
+                "ImageUpload": "Decorate\\Facades\\ImageUpload"
             }
         }
     },

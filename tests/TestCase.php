@@ -6,7 +6,7 @@
         protected function getPackageProviders ($app)
         {
             return [
-                'Sh\Providers\ImageUploadProvider',
+                'Decorate\Providers\ImageUploadProvider',
                 'Illuminate\Filesystem\FilesystemServiceProvider',
                 'Intervention\Image\ImageServiceProvider'
             ];
@@ -15,7 +15,7 @@
         protected function getPackageAliases ($app)
         {
             return [
-              'ImageUpload' => 'Sh\Facades\ImageUpload',
+              'ImageUpload' => 'Decorate\Facades\ImageUpload',
               'Storage' => 'Illuminate\Support\Facades\Storage',
               'Image' => 'Intervention\Image\Facades\Image'
             ];
