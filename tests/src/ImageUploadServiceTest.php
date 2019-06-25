@@ -1,5 +1,5 @@
 <?php
-    namespace Test;
+    namespace ImageUpload\Test;
 
     use Illuminate\Http\UploadedFile;
     use Illuminate\Support\Facades\Storage;

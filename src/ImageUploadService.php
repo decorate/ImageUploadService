@@ -211,7 +211,7 @@ class ImageUploadService
     public function createImageModel($model, array $images) {
         return collect($images)
             ->filter(function($x) {
-                return !isset($x['id']);
+                return !isset($x['id']) || $x['id'] === 0;
             })
             ->map(function($x) use($model){
                 return new $model($x);
