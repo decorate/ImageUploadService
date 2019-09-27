@@ -73,14 +73,20 @@ class ImageUploadService
      * @param string $key
      * @return string
      */
-    private function uploadFromBase64 ($image, string $key, $option): string {
+    private function uploadFromBase64 ($image, string $key, $option, $local = false): string {
         $ext = $this->getExtensionFromBase64($image);
         $image = explode(',', $image);
 
         $tmp = base64_decode(end($image));
         $path = $key. $this->faker->uuid. '.'. $ext;
-        $this->storage->put($path, $tmp, $option);
-        $url = $this->storage->url($path);
+
+        if($local) {
+            Storage::disk('public')->put($path, $tmp, $option);
+            $url = Storage::disk('public')->url($path);
+        } else {
+            $this->storage->put($path, $tmp, $option);
+            $url = $this->storage->url($path);
+        }
 
         return $url;
     }
@@ -93,7 +99,7 @@ class ImageUploadService
      * @throws \Illuminate\Validation\ValidationException
      */
     public function createUploadFile($image) {
-        $url = $this->uploadFromBase64($image, '/tmp/', 'public');
+        $url = $this->uploadFromBase64($image, '/tmp/', 'public', true);
         $basename = basename($url, PATHINFO_BASENAME);
         $path = storage_path('app/public/tmp/'. $basename);
         $u = new UploadedFile($path, $basename);
